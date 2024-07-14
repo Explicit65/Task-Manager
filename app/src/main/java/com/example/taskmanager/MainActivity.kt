@@ -43,16 +43,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun TaskManager(task: String, comment: String, modifier: Modifier = Modifier) {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        contentAlignment = Alignment.Center
-    ) {
         Column(
+            modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.align(Alignment.Center)
         ) {
             Image(
                 painter = painterResource(R.drawable.ic_task_completed),
@@ -69,7 +63,6 @@ fun TaskManager(task: String, comment: String, modifier: Modifier = Modifier) {
             )
         }
     }
-}
 
 @Preview(showBackground = true)
 @Composable
